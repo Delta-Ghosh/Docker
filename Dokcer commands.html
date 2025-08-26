@@ -1,17 +1,32 @@
 <p>
-    <h4>
+    <h2>Containers and Images Commands </h2>
     
-        
-        docker images - list all images
-        docker rmi <image name> - delete an image
-        docker rm <container name> - delete a container
-        docker image prune - Remove unused images
-        docker pull <image name> - Pull an image from DockerHub
-        docker run <image name> - Create and run a new container
-        docker run -it <image name> - run and input int the container 
-        docker ps -a - list all Local container
-        docker ps - list all running containers
-        
+        <h4>
+            docker images - list all images
+            docker rmi <image name> - delete an image
+            docker rm <container name> - delete a container
+            docker image prune - Remove unused images
+            docker pull <image name> - Pull an image from DockerHub
+            docker run <image name> - Create and run a new container
+            docker run -it <image name> - run and input int the container 
+            docker run -d -e MYSQL_ROOT_PASSWORD=secret <image name> - run mysql container in detached mode with environment variable
+            docker run -d -e MYSQL_ROOT_PASSWORD=secret --name <new name> mysql
+            docker ps -a - list all Local container
+            docker ps - list all running containers
+        </h4>
 
-    </h4>
+    <h2> Port binding Commands </h2>
+        <h4>                
+        docker run -p<host_port>:<container_port> <image_name> - This line is a Docker command used to run a container and map ports between your host machine and the container. (8080:3306)
+        </h4>
+    
+    <h2> Troubleshoot Commands </h2>
+        <h4>
+            docker log <containerid> - This command displays the logs (output) from mention container.
+            docker exec -it <containerid> bin/bash -This command is used to open an interactive shell session inside a running Docker container.
+            docker exec -it <containerid> bin/sh - if there is no bash use it 
+                their (search env,ls,etc)
+        </h4>
+
+
 </p>
