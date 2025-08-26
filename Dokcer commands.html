@@ -28,5 +28,20 @@
                 their (search env,ls,etc)
         </h4>
 
+    <h2> Docker Network </h2>
+        <h4>
+            docker network ls - how many network available in docker
+            docker network create <network_name> - create your own network
+            <h5>
+            >docker run -d \                             #detouch 
+            -p27017:27017 \                              #mongodb port
+            --name mongo \                               #rename container  
+            --network mongo-net \                        #connect to your network
+            -e MONGO_INITDB_ROOT_USERNAME=ghosh \        #username
+            -e MONGO_INIDB_ROOT_PASSWORD=123 \           #password
+            mongo                                        #image name
+            </h5>
+        </h4>
+
 
 </p>
